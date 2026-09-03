@@ -1,0 +1,14 @@
+Student notes:
+`"$1"` is the side length passed as the first command-line argument.
+
+`--extract` is the option used with `tar` to extract files from an archive.
+`--gzip` is the option used with `tar` to handle gzip-compressed archives.
+`--file=NthPrime.tgz` specifies the archive file to extract.
+
+`cd NthPrime || exit 1` changes the current directory to the one created by extracting the archive, 
+and exits with an error if the directory does not exist.
+
+`gcc main.c nth_prime.c --output=NthPrime` compiles and links the C source files into an executable named `NthPrime`.
+
+`./NthPrime "$side_length"` runs the newly compiled executable and passes along the original command-line argument.
+`chmod +x extract_and_measure.sh` gives the script executable permissions if needed.
